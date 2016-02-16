@@ -1,5 +1,5 @@
-#ifndef PUBLIC
-#define PUBLIC
+#ifndef WRD_PUBLIC
+#define WRD_PUBLIC
 
 /***************************************************************************
  *
@@ -33,35 +33,13 @@ MYOTEST_EXTERN void myoAPI_release(void);
 
 MYOTEST_EXTERN void myoAPI_acquisition(long timestamp, int accX, int accY, int accZ);
 MYOTEST_EXTERN void myoAPI_process(void);
-MYOTEST_EXTERN void myoAPI_stop(void);
-MYOTEST_EXTERN void myoAPI_setSpeakCallBack( void (*functPtrSpeak)(char *));
-MYOTEST_EXTERN void myoAPI_setChangeAcquisitionResolutionCallBack( void (*functPtrChnAcqRes)(int) );
 MYOTEST_EXTERN void myoAPI_resetCounters(void);
 
 
-/* SETTER */
- //MVT_ROM
-MYOTEST_EXTERN void myoAPI_speechDone(void);
-
-	
-/*ROM*/
- //MVT_ROM
-MYOTEST_EXTERN float myoAPI_getCurrentAngle(void);
-MYOTEST_EXTERN float myoAPI_getFinalAngle(void);
-
-
-MYOTEST_EXTERN short  myoAPI_getCurrentState(void);
-
 /*ACTIVITY MONiTOR*/
-
-MYOTEST_EXTERN long myoAPI_getStepCounter(void);
-MYOTEST_EXTERN long myoAPI_getMissingStepCounter(void);
-MYOTEST_EXTERN long myoAPI_getArtifactStepCounter(void);
-MYOTEST_EXTERN long myoAPI_getValidStepCounter(void);
-
 MYOTEST_EXTERN long myoAPI_getWalkingStepCounter(void);
 MYOTEST_EXTERN long myoAPI_getRunningStepCounter(void);
-MYOTEST_EXTERN long myoAPI_getOtherStepCounter(void);
+
 
 
 #ifdef  __cplusplus
@@ -69,5 +47,4 @@ MYOTEST_EXTERN long myoAPI_getOtherStepCounter(void);
 #endif
 
 
-#endif // PUBLIC
-
+#endif // WRD_PUBLIC
