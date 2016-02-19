@@ -35,12 +35,9 @@ MYOTEST_EXTERN void myoAPI_acquisition(long timestamp, int accX, int accY, int a
 MYOTEST_EXTERN void myoAPI_process(void);
 MYOTEST_EXTERN void myoAPI_resetCounters(void);
 
-
 /*ACTIVITY MONiTOR*/
 MYOTEST_EXTERN long myoAPI_getWalkingStepCounter(void);
 MYOTEST_EXTERN long myoAPI_getRunningStepCounter(void);
-
-
 
 #ifdef  __cplusplus
 }
