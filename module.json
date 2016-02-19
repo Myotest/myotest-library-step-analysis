@@ -1,13 +1,17 @@
 {
   "name": "myotest-library-step-analysis",
   "version": "1.0.0",
-  "description": "Myotest MIL",
+  "description": "mbed module encapsulating the Myotest Step Analysis binary library, compiled for SiLab EFM32GG",
   "keywords": [
     "Myotest",
-	"myotest",
-	"library"
+    "myotest",
+    "library",
+    "step analysis",
+    "step counter",
+    "walk",
+    "run",
   ],
-  "author": "Myotest",
+  "author": "Myotest R&D Team",
   "repository": {
     "url": "",
     "type": "git"
