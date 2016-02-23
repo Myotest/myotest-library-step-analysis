@@ -1,5 +1,3 @@
-Myotest Step Analysis Library - API guide
-
 # Myotest Step Analysis Library - API guide
 ## Introduction
 Myotest motion analysis libraries bridge the gap between raw sensor signal and meaningful information. They allow third parties to focus on product development and user experience whilst sensor signal processing is taken care off by the libraries.
