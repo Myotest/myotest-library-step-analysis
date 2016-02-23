@@ -1,6 +1,6 @@
 {
   "name": "myotest-library-step-analysis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mbed module encapsulating the Myotest Step Analysis binary library, compiled for SiLab EFM32GG",
   "keywords": [
     "Myotest",
@@ -13,10 +13,10 @@
   ],
   "author": "Myotest R&D Team",
   "repository": {
-    "url": "",
+    "url": "git@github.com:Myotest/myotest-library-step-analysis",
     "type": "git"
   },
-  "homepage": "",
+  "homepage": "https://github.com/Myotest/myotest-library-step-analysis",
   "license": "Apache-2.0",
   "dependencies": {}
 }
