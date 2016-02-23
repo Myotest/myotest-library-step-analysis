@@ -5,7 +5,7 @@ Myotest libraries bridge the gap between raw sensor signal and meaningful inform
 
 The Step Analysis library is a technology demonstrator made available by Myotest. It is, amongst other things, able to reliably count steps and automatically differentiate between walking and running.
 
-The Step Analysis library takes raw sensor signal as input (raw 3 axis accelerometer signal and timestamp) and delivers meaningful features such as a daily walking step counter and a daily running step counter. The library is also able to give feedback to the application on the most appropriate sensor sampling rate and sensor data resolution, based on the current activity, to optimize power consumption. Further information is available in the Step Analysis library [API guide](api_guide.md) and in the [Integration guide](Integration_guide.md).
+The Step Analysis library takes raw sensor signal as input (raw 3 axis accelerometer signal and timestamp) and delivers meaningful features such as a daily walking step counter and a daily running step counter. The library is also able to give feedback to the application on the most appropriate sensor sampling rate and sensor data resolution, based on the current activity, to optimize power consumption. Further information is available in the Step Analysis library [API guide](Docs/api_guide.md) and in the [Integration guide](Integration_guide.md).
 
 The Step Analysis library encapsulate algorithms that work in the background without any specific interaction from the user required. It is designed to work with a sensor worn either at the wrist, on the belt or on the chest.
 
