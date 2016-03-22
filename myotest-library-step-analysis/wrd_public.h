@@ -1,3 +1,6 @@
+#ifndef WRD_PUBLIC
+#define WRD_PUBLIC
+
 /* **************************************************************************
 *
 *
@@ -27,13 +30,9 @@
 * limitations under the License.
 ****************************************************************************/
 
-#ifndef WRD_PUBLIC
-#define WRD_PUBLIC
-
 typedef enum myoAPI_ExerciseUID
 {
-    RANGE_OF_MOTION,
-    ACTIVITY_MONITOR
+    STEP_ANALYSIS = 1
 } myoAPI_ExerciseUID;
 
 
@@ -44,20 +43,53 @@ typedef enum myoAPI_ExerciseUID
 extern "C" {
 #endif
 
-MYOTEST_EXTERN void myoAPI_init(myoAPI_ExerciseUID);
-MYOTEST_EXTERN void myoAPI_release(void);
+/************************************************************************/
+/* Name : myoAPI_init                                                   */
+/* in   : Exercise UID                                                  */
+/* out  : 0 = Error ; 1 = Initialization ok                             */
+/*        2 = ExerciseUID not recognised                                */
+/************************************************************************/
+MYOTEST_EXTERN short myoAPI_init(myoAPI_ExerciseUID);
 
-MYOTEST_EXTERN void myoAPI_acquisition(long timestamp, int accX, int accY, int accZ);
-MYOTEST_EXTERN void myoAPI_process(void);
-MYOTEST_EXTERN void myoAPI_resetCounters(void);
+/************************************************************************/
+/* Name : myoAPI_release                                                */
+/* in   : none                                                          */
+/* out  : 0 = Error ; 1 = Ok ; 2 = ExerciseUID not recognised           */
+/************************************************************************/
+MYOTEST_EXTERN short myoAPI_release(void);
 
-/*ACTIVITY MONITOR*/
+/************************************************************************/
+/* Name : myoAPI_acquisition                                            */
+/* in   : timestamp in millisecond                                      */
+/*        acceleration axis X, Y and Z in milli g                       */
+/* out  : 0 = Default ; 1 = Input buffer full => need to call process   */
+/*        2 = ExerciseUID not recognised                                */
+/************************************************************************/
+MYOTEST_EXTERN short myoAPI_acquisition(long timestamp_InMs, int accelerationX_InMg, int accelerationY_InMg, int accelerationZ_InMg);
+
+/************************************************************************/
+/* Name : myoAPI_process                                                */
+/* in   : none                                                          */
+/* out  : 0 = Default ; 1 = The process is busy                         */
+/*        2 = ExerciseUID not recognised                                */
+/************************************************************************/
+MYOTEST_EXTERN short myoAPI_process(void);
+
+/************************************************************************/
+/* Name : myoAPI_resetCounters                                          */
+/* in   : none                                                          */
+/* out  : 0 = Error ; 1 = Ok ; 2 = ExerciseUID not recognised           */
+/************************************************************************/
+MYOTEST_EXTERN short myoAPI_resetCounters(void);
+
+
+/**** GETTER ****/
 MYOTEST_EXTERN long myoAPI_getWalkingStepCounter(void);
 MYOTEST_EXTERN long myoAPI_getRunningStepCounter(void);
+MYOTEST_EXTERN long myoAPI_getAlgoPath(void);
 
 #ifdef  __cplusplus
 }
 #endif
-
 
 #endif // WRD_PUBLIC
