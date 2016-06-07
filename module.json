@@ -1,6 +1,6 @@
 {
   "name": "myotest-library-step-analysis",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "mbed module encapsulating the Myotest Step Analysis binary library, compiled for SiLab EFM32GG",
   "keywords": [
     "Myotest",
